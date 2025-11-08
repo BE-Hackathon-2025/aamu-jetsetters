@@ -92,7 +92,6 @@ Jetsetters (Team AAMU)
 
 
 ## ✨ Contributors ✨
-- Add contributors and roles here. Example:
 
 - Thabo Ibrahim Traore 
 - Solomon Agyire
