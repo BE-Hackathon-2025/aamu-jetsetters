@@ -99,8 +99,3 @@ Jetsetters (Team AAMU)
 - Asia Harris
 - Osamwengumwenro (Godslove) Oni-Ojo 
 
-
-## Team Photo
-- Add `team-photo.jpg` or paste an image link here.
-
-
