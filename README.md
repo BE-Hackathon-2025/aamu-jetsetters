@@ -84,3 +84,24 @@ High-level flow:
 ### Collaboration & Version Control
 - Git + GitHub for source control. Feature branches and PRs recommended.
 
+### School Name 🏫
+Alabama A&M University
+
+### Team Name 🏷
+Jetsetters (Team AAMU)
+
+
+## ✨ Contributors ✨
+- Add contributors and roles here. Example:
+
+- Thabo Ibrahim Traore 
+- Solomon Agyire
+- Zizwe Mtonga
+- Asia Harris
+- Osamwengumwenro (Godslove) Oni-Ojo 
+
+
+## Team Photo
+- Add `team-photo.jpg` or paste an image link here.
+
+
