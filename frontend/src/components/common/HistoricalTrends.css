@@ -1,0 +1,203 @@
+.historical-trends {
+  background: 
+    linear-gradient(135deg, rgba(26, 26, 46, 0.6), rgba(15, 52, 96, 0.4)),
+    rgba(26, 26, 46, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 
+    0 4px 20px rgba(0, 212, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.historical-trends::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -40%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .historical-trends {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.trends-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.trends-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.time-range-selector {
+  display: flex;
+  gap: 8px;
+  background: rgba(10, 14, 39, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.range-btn {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #a0a0a0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.range-btn:hover {
+  color: #ffffff;
+  background: rgba(15, 52, 96, 0.4);
+  box-shadow: inset 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.range-btn.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.historical-trends.admin .range-btn.active {
+  background: 
+    linear-gradient(90deg, rgba(167, 139, 250, 0.3), rgba(157, 78, 221, 0.2)),
+    rgba(167, 139, 250, 0.2);
+  box-shadow: 
+    inset 0 0 20px rgba(167, 139, 250, 0.2),
+    0 0 15px rgba(167, 139, 250, 0.15);
+}
+
+.historical-trends.community .range-btn.active {
+  background: 
+    linear-gradient(90deg, rgba(59, 130, 246, 0.3), rgba(0, 212, 255, 0.2)),
+    rgba(59, 130, 246, 0.2);
+  box-shadow: 
+    inset 0 0 20px rgba(59, 130, 246, 0.2),
+    0 0 15px rgba(59, 130, 246, 0.15);
+}
+
+.chart-container {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  min-width: 45px;
+}
+
+.axis-value {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  color: #a0a0a0;
+  text-align: right;
+}
+
+.chart-area {
+  flex: 1;
+  background: rgba(10, 14, 39, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.unit-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a0a0a0;
+  background: rgba(10, 14, 39, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 57px 0 57px;
+}
+
+.axis-label {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 11px;
+  color: #a0a0a0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .trends-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .time-range-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .range-btn {
+    flex: 1;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .chart-area {
+    min-height: 180px;
+  }
+
+  .x-axis {
+    padding: 0 50px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .historical-trends {
+    padding: 16px;
+  }
+
+  .trends-title {
+    font-size: 16px;
+  }
+
+  .chart-area {
+    min-height: 160px;
+  }
+}
+

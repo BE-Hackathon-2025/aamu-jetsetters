@@ -1,0 +1,46 @@
+/* 
+  Gradient Mixin Patterns - Copy these styles for consistent blended gradient theme
+  Use these instead of solid black backgrounds
+*/
+
+/* Primary Card Style - Use for main containers */
+.gradient-card-primary {
+  background: 
+    linear-gradient(135deg, rgba(26, 26, 46, 0.6), rgba(15, 52, 96, 0.4)),
+    rgba(26, 26, 46, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid;
+  border-image: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(157, 78, 221, 0.2)) 1;
+  box-shadow: 
+    0 4px 20px rgba(0, 212, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Secondary/Nested Elements - More transparent */
+.gradient-nested {
+  background: rgba(10, 14, 39, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+/* Hover State for nested elements */
+.gradient-nested-hover {
+  background: 
+    linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent),
+    rgba(15, 52, 96, 0.4);
+  box-shadow: inset 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+/* Input fields */
+.gradient-input {
+  background: rgba(10, 14, 39, 0.5);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.gradient-input-focus {
+  background: rgba(15, 52, 96, 0.5);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+

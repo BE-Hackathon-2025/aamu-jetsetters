@@ -1,0 +1,82 @@
+.status-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px;
+  gap: 16px;
+}
+
+.status-icon {
+  color: #10b981;
+}
+
+.status-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.status-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.status-level {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.status-low-risk {
+  color: #10b981;
+}
+
+.status-medium-risk {
+  color: #fbbf24;
+}
+
+.status-high-risk {
+  color: #f97316;
+}
+
+.status-critical {
+  color: #ef4444;
+}
+
+.status-description {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin: 0;
+  max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .status-card {
+    padding: 40px 32px;
+  }
+
+  .status-icon svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .status-title {
+    font-size: 24px;
+  }
+
+  .status-level {
+    font-size: 32px;
+  }
+
+  .status-description {
+    font-size: 16px;
+  }
+}
+

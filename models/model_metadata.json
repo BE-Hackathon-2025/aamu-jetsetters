@@ -1,0 +1,13 @@
+{
+  "training_date": "2025-11-08 05:37:59",
+  "num_features": 145,
+  "sequence_length": 24,
+  "test_auc": 0.991451936263919,
+  "test_f1": 0.8826185101580135,
+  "ensemble_weights": {
+    "rf": 0.35,
+    "ae": 0.25,
+    "lstm": 0.4
+  },
+  "threshold_ae": 0.3955155125916063
+}

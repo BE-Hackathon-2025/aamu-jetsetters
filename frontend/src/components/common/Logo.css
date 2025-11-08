@@ -1,0 +1,88 @@
+.logo-component {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-image {
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(48%) saturate(449%) hue-rotate(122deg) brightness(94%) contrast(88%);
+}
+
+.logo-image-full {
+  display: block;
+  object-fit: contain;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(48%) saturate(449%) hue-rotate(122deg) brightness(94%) contrast(88%);
+}
+
+.logo-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Size variants */
+.logo-component.small .logo-image-container {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-component.small .logo-image {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-component.small .logo-text {
+  font-size: 16px;
+}
+
+.logo-component.small.full-logo .logo-image-full {
+  width: 100px;
+}
+
+.logo-component.medium .logo-image-container {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-component.medium .logo-image {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-component.medium .logo-text {
+  font-size: 20px;
+}
+
+.logo-component.medium.full-logo .logo-image-full {
+  width: 120px;
+}
+
+.logo-component.large .logo-image-container {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-component.large .logo-image {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-component.large .logo-text {
+  font-size: 24px;
+}
+
+.logo-component.large.full-logo .logo-image-full {
+  width: 150px;
+}
+

@@ -1,0 +1,124 @@
+.model-output {
+  background: 
+    linear-gradient(135deg, rgba(26, 26, 46, 0.6), rgba(15, 52, 96, 0.4)),
+    rgba(26, 26, 46, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid;
+  border-image: linear-gradient(135deg, rgba(0, 212, 255, 0.3), #9d4edd33) 1;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 
+    0 4px 20px rgba(0, 212, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.model-output::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(157, 78, 221, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .model-output {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.model-output-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.model-output-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.output-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.output-label {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #a0a0a0;
+}
+
+.output-value {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.output-value.highlight {
+  color: #a78bfa;
+}
+
+.output-value.timestamp {
+  font-weight: 400;
+  color: #e0e0e0;
+  font-size: 13px;
+}
+
+.severity-tag {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.severity-low {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.severity-medium {
+  background-color: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+.severity-high {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.severity-critical {
+  background-color: rgba(220, 38, 38, 0.3);
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .model-output {
+    padding: 16px;
+  }
+
+  .output-label,
+  .output-value {
+    font-size: 12px;
+  }
+}
+

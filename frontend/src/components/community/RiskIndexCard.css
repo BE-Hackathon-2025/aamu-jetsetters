@@ -1,0 +1,113 @@
+.risk-index-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 20px;
+  text-align: center;
+}
+
+.risk-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.risk-icon {
+  color: #a78bfa;
+}
+
+.risk-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.risk-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.risk-circle-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.risk-circle {
+  transform: rotate(0deg);
+}
+
+.risk-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.risk-badge {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid #4a4a4a;
+}
+
+.risk-low {
+  color: #10b981;
+}
+
+.risk-moderate {
+  color: #fbbf24;
+}
+
+.risk-high {
+  color: #f97316;
+}
+
+.risk-critical {
+  color: #ef4444;
+}
+
+.risk-description {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #a0a0a0;
+  margin: 0;
+  max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .risk-index-card {
+    padding: 32px;
+  }
+
+  .risk-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .risk-title {
+    font-size: 20px;
+  }
+
+  .risk-description {
+    font-size: 15px;
+  }
+}
+

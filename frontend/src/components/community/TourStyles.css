@@ -1,0 +1,92 @@
+.joyride-tooltip {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2) !important;
+  border-radius: 12px !important;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+.joyride-tooltip__header {
+  color: #00d4ff !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+.joyride-tooltip__content {
+  color: #e0e0e0 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+.joyride-tooltip__footer {
+  margin-top: 16px !important;
+  display: flex !important;
+  gap: 8px !important;
+  justify-content: flex-end !important;
+}
+
+.joyride-tooltip__button {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(157, 78, 221, 0.2)) !important;
+  border: 1px solid rgba(0, 212, 255, 0.4) !important;
+  color: #00d4ff !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.joyride-tooltip__button:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(157, 78, 221, 0.3)) !important;
+  border-color: rgba(0, 212, 255, 0.6) !important;
+  transform: translateY(-1px) !important;
+}
+
+.joyride-tooltip__button--primary {
+  background: linear-gradient(135deg, #00d4ff, #9d4edd) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.joyride-tooltip__button--primary:hover {
+  background: linear-gradient(135deg, #00b8e6, #8b3dd1) !important;
+}
+
+.joyride-tooltip__button--skip {
+  background: transparent !important;
+  color: #a0a0a0 !important;
+  border: 1px solid rgba(160, 160, 160, 0.3) !important;
+}
+
+.joyride-tooltip__button--skip:hover {
+  background: rgba(160, 160, 160, 0.1) !important;
+  color: #e0e0e0 !important;
+}
+
+.joyride-tooltip__close {
+  color: #a0a0a0 !important;
+}
+
+.joyride-tooltip__close:hover {
+  color: #00d4ff !important;
+}
+
+.joyride-beacon {
+  background: #00d4ff !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6) !important;
+}
+
+.joyride-overlay {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.joyride-spotlight {
+  border: 3px solid rgba(0, 212, 255, 0.5) !important;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4) !important;
+}
+

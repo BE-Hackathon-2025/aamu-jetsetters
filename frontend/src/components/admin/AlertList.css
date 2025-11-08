@@ -1,0 +1,133 @@
+.alert-list-container {
+  background: 
+    linear-gradient(135deg, rgba(26, 26, 46, 0.6), rgba(15, 52, 96, 0.4)),
+    rgba(26, 26, 46, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid;
+  border-image: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(157, 78, 221, 0.2)) 1;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 
+    0 4px 20px rgba(0, 212, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-list-container::before {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(157, 78, 221, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .alert-list-container {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.alert-list-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+}
+
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.alert-severity-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.severity-heading {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.alert-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(10, 14, 39, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 6px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.alert-item:hover {
+  background: 
+    linear-gradient(90deg, rgba(0, 212, 255, 0.1), transparent),
+    rgba(15, 52, 96, 0.4);
+  box-shadow: inset 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.alert-type {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.alert-status {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-align: center;
+  width: fit-content;
+}
+
+.status-active {
+  color: #ffffff;
+  background-color: #ef4444;
+}
+
+.status-acknowledged {
+  color: #ffffff;
+  background-color: #6b7280;
+}
+
+.status-resolved {
+  color: #ffffff;
+  background-color: #10b981;
+}
+
+.alert-time {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #a0a0a0;
+}
+
+@media (max-width: 768px) {
+  .alert-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .alert-status {
+    width: fit-content;
+  }
+}
+

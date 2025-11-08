@@ -1,0 +1,101 @@
+:root {
+  font-family: 'Ubuntu', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  --bg-primary-light: #ffffff;
+  --bg-secondary-light: #f8f9fa;
+  --text-primary-light: #1a1a1a;
+  --text-secondary-light: #666666;
+  --card-bg-light: #ffffff;
+  --border-light: #e5e7eb;
+  
+  --bg-gradient-dark-1: #0a0e27;
+  --bg-gradient-dark-2: #16213e;
+  --bg-gradient-dark-3: #0f3460;
+  --bg-gradient-dark-4: #1a1a2e;
+  --accent-cyan: #00d4ff;
+  --accent-purple: #9d4edd;
+  --accent-pink: #ff006e;
+  --accent-teal: #14b8a6;
+  --text-primary-dark: #e8eaed;
+  --text-secondary-dark: #9ca3af;
+  --card-bg-dark: rgba(26, 26, 46, 0.7);
+  --card-border-dark: rgba(0, 212, 255, 0.2);
+}
+
+/* Force Dark Mode Only */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  color: var(--text-primary-dark);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Background - Always Applied */
+body {
+  background: 
+    radial-gradient(ellipse at top left, rgba(157, 78, 221, 0.15), transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(0, 212, 255, 0.15), transparent 50%),
+    radial-gradient(ellipse at top right, rgba(255, 0, 110, 0.1), transparent 50%),
+    linear-gradient(135deg, var(--bg-gradient-dark-1) 0%, var(--bg-gradient-dark-2) 40%, var(--bg-gradient-dark-3) 80%, var(--bg-gradient-dark-4) 100%);
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.08) 0%, transparent 40%);
+  animation: pulse-ambient 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes pulse-ambient {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

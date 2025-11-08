@@ -1,0 +1,141 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+[data-theme="dark"] .app::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(0, 212, 255, 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 70% 60%, rgba(157, 78, 221, 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(255, 0, 110, 0.05) 0%, transparent 40%);
+  animation: rotate-gradient 30s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes rotate-gradient {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.app > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Success screen styles */
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.success-card {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 16px;
+  padding: 48px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2), 0 0 80px rgba(157, 78, 221, 0.1);
+  text-align: center;
+}
+
+[data-theme="light"] .success-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+}
+
+.success-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.success-message {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #a0a0a0;
+  margin: 0 0 32px 0;
+}
+
+.success-button {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 32px;
+  background-color: #14b8a6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.success-button:hover {
+  background-color: #0f9b8e;
+}
+
+.success-button:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .success-card {
+    padding: 32px 24px;
+  }
+
+  .success-icon {
+    font-size: 64px;
+  }
+
+  .success-title {
+    font-size: 28px;
+  }
+
+  .success-message {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-card {
+    padding: 24px 20px;
+  }
+
+  .success-icon {
+    font-size: 56px;
+  }
+
+  .success-title {
+    font-size: 24px;
+  }
+
+  .success-message {
+    font-size: 13px;
+  }
+}

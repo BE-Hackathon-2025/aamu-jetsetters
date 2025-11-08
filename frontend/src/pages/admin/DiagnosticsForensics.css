@@ -1,0 +1,87 @@
+.diagnostics-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.diagnostics-header {
+  margin-bottom: 8px;
+}
+
+.diagnostics-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.diagnostics-subtitle {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+.diagnostics-top-section {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.chart-section,
+.schematic-section {
+  min-height: 350px;
+}
+
+.diagnostics-bottom-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .diagnostics-top-section {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-section,
+  .schematic-section {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagnostics-title {
+    font-size: 24px;
+  }
+
+  .diagnostics-subtitle {
+    font-size: 14px;
+  }
+
+  .diagnostics-page {
+    gap: 16px;
+  }
+
+  .diagnostics-top-section {
+    gap: 16px;
+  }
+
+  .chart-section,
+  .schematic-section {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagnostics-title {
+    font-size: 20px;
+  }
+
+  .diagnostics-subtitle {
+    font-size: 13px;
+  }
+}
+
